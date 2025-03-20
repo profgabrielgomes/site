@@ -131,7 +131,15 @@
 
 
         <footer>
-            <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+           <p>&copy; 2025 Gabriel Gomes Figueiredo. All rights reserved.</p>
+<p>Last updated: <span id="lastUpdated"></span></p>
+
+<script>
+    document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric'
+    });
+</script>
+
         </footer>
     </div>
 </body>
