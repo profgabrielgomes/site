@@ -130,17 +130,19 @@
 </section>
 
 
-        <footer>
-           <p>&copy; 2025 Gabriel Gomes Figueiredo. All rights reserved.</p>
-<p>Last updated: <span id="lastUpdated"></span></p>
+<footer>
+    <p>&copy; 2025 Gabriel Gomes Figueiredo. All rights reserved.</p>
+    <p>Last updated: <span id="lastUpdated"></span></p>
 
-<script>
-    document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric'
-    });
-</script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString('en-US', {
+                year: 'numeric', month: 'long', day: 'numeric'
+            });
+        });
+    </script>
+</footer>
 
-        </footer>
     </div>
 </body>
 </html>
