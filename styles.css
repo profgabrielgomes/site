@@ -119,3 +119,15 @@ footer {
     margin: 5px 0 0;
 }
 
+/* Garantir espaçamento e alinhamento corretos para todas as seções */
+section {
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+/* Garantir que a seção "Participations in Events" siga o mesmo estilo */
+#ParticipationsInEvents {
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
