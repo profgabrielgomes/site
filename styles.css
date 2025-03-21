@@ -131,4 +131,18 @@ section {
     padding: 20px 0;
 }
 
+/* Estilo padrão para telas grandes */
+body {
+    font-size: 16px;
+    padding: 20px;
+}
+
+/* Estilo para telas pequenas, como celulares */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;  /* Menor tamanho de fonte */
+        padding: 10px;  /* Menor espaçamento */
+    }
+}
+
 
