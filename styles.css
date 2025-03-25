@@ -197,4 +197,12 @@ nav ul li a:hover {
     background-color: #ddd;  /* Muda a cor do fundo ao passar o mouse */
 }
 
+.hints-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+
 
