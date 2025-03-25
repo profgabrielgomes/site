@@ -244,6 +244,46 @@ nav ul li a {
     }
 }
 
+/* Estilo para o botão do menu hamburguer */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+
+/* Exibir o botão hamburguer em telas pequenas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+/* Quando o menu estiver visível */
+.menu-toggle.active + #menu {
+    display: flex;
+}
+
+
 
 
 
