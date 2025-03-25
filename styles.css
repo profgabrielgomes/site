@@ -111,13 +111,46 @@ footer {
     border-top: 1px solid #eee;
 }
 
-.profile-photo {
-    width: 90px;  /* Largura da foto */
-    height: 120px;  /* Altura da foto */
-    border-radius: 8px;  /* Bordas levemente arredondadas */
-    object-fit: cover;  /* Para garantir que a imagem não distorça */
-    border: 2px solid #ddd;  /* Borda ao redor da foto */
+/* Alinhamento de foto e nome */
+.profile {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    gap: 15px; /* Espaçamento entre a foto e o nome */
+    padding: 20px;
 }
+
+/* Estilo da foto em formato 3x4 */
+.profile-photo {
+    width: 90px; /* Largura */
+    height: 120px; /* Altura (3x4) */
+    border-radius: 8px; /* Bordas arredondadas */
+    object-fit: cover; /* Mantém o conteúdo da imagem sem distorção */
+    border: 2px solid #ddd; /* Borda ao redor da foto */
+}
+
+/* Estilo do nome e logo do Flamengo */
+.profile-info h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: black;
+    display: flex;
+    align-items: center; /* Alinha o texto e o ícone do Flamengo */
+}
+
+/* Logo do Flamengo */
+.flamengo-logo {
+    margin-left: 10px; /* Espaço entre o nome e o logo */
+    width: 32px;
+    height: 32px;
+    vertical-align: middle; /* Alinha verticalmente o ícone do Flamengo */
+}
+
+.profile-info p {
+    font-size: 1rem;
+    color: #777;
+    margin: 5px 0 0;
+}
+
 
 
 
