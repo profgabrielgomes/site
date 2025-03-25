@@ -151,6 +151,15 @@ footer {
     margin: 5px 0 0;
 }
 
+/* Estilo da foto em formato 3x4 */
+.profile-photo {
+    width: 90px; /* Largura */
+    height: 120px; /* Altura (3x4) */
+    border-radius: 8px; /* Bordas arredondadas */
+    object-fit: cover; /* Mantém o conteúdo da imagem sem distorção */
+    border: 2px solid #ddd; /* Borda ao redor da foto */
+}
+
 
 
 
