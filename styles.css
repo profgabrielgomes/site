@@ -160,6 +160,79 @@ footer {
     border: 2px solid #ddd; /* Borda ao redor da foto */
 }
 
+/* Estilo para o botão do menu hamburguer */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1001;  /* Garante que o botão esteja acima dos outros elementos */
+}
+
+/* Estilo para telas pequenas (até 768px) */
+@media (max-width: 768px) {
+    /* O menu não aparece por padrão em telas pequenas */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* Mostrar o botão hamburguer */
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Mostrar o menu quando o botão for ativado */
+.menu-toggle.active + nav ul {
+    display: flex; /* Exibe o menu */
+}
+
+/* Melhoria no estilo de navegação para melhorar a visibilidade */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+/* Hover efeito no menu */
+nav ul li a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
 
 
 
