@@ -86,8 +86,8 @@ nav ul li a:hover {
     }
 }
 
-/* Mostrar o menu quando ativo */
-.menu-toggle.active + #menu {
+/* Mostrar o menu quando o botão hamburguer estiver ativo */
+.menu-toggle.active + nav ul {
     display: flex;
 }
 
@@ -150,7 +150,6 @@ footer {
     color: #777;
     margin: 5px 0 0;
 }
-
 
 
 
