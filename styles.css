@@ -145,4 +145,23 @@ body {
     }
 }
 
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #007bff;
+}
+
+h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: square;
+}
+
 
