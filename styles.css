@@ -47,48 +47,25 @@ nav ul li a:hover {
     color: #333;
 }
 
-/* Botão menu hamburguer */
-.menu-toggle {
-    display: none;
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    color: white;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-
 /* Estilo para telas pequenas (até 768px) */
 @media (max-width: 768px) {
-    /* O menu não aparece por padrão em telas pequenas */
+    /* O menu será exibido normalmente em telas pequenas */
     nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
+        display: flex; /* Deixe o menu flexível em telas pequenas */
+        flex-direction: row; /* Itens dispostos na horizontal */
+        width: 100%; /* Ocupa toda a largura */
         background-color: #333;
     }
 
     nav ul li {
-        width: 100%;
+        width: auto; /* Itens com largura automática */
         text-align: center;
     }
 
     nav ul li a {
-        padding: 15px;
-        font-size: 18px;
+        padding: 10px; /* Menos espaçamento para melhorar a exibição */
+        font-size: 16px; /* Ajuste do tamanho da fonte */
     }
-
-    /* Mostrar o botão hamburguer */
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* Mostrar o menu quando o botão hamburguer estiver ativo */
-.menu-toggle.active + nav ul {
-    display: flex;
 }
 
 /* Melhorando a aparência de outras partes */
@@ -149,60 +126,6 @@ footer {
     font-size: 1rem;
     color: #777;
     margin: 5px 0 0;
-}
-
-/* Estilo da foto em formato 3x4 */
-.profile-photo {
-    width: 90px; /* Largura */
-    height: 120px; /* Altura (3x4) */
-    border-radius: 8px; /* Bordas arredondadas */
-    object-fit: cover; /* Mantém o conteúdo da imagem sem distorção */
-    border: 2px solid #ddd; /* Borda ao redor da foto */
-}
-
-/* Estilo para o botão do menu hamburguer */
-.menu-toggle {
-    display: none;
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    color: white;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    z-index: 1001;  /* Garante que o botão esteja acima dos outros elementos */
-}
-
-/* Estilo para telas pequenas (até 768px) */
-@media (max-width: 768px) {
-    /* O menu não aparece por padrão em telas pequenas */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        padding: 15px;
-        font-size: 18px;
-    }
-
-    /* Mostrar o botão hamburguer */
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* Mostrar o menu quando o botão for ativado */
-.menu-toggle.active + nav ul {
-    display: flex; /* Exibe o menu */
 }
 
 /* Melhoria no estilo de navegação para melhorar a visibilidade */
