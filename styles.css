@@ -111,6 +111,13 @@ footer {
     border-top: 1px solid #eee;
 }
 
+.profile-photo {
+    width: 90px;  /* Largura da foto */
+    height: 120px;  /* Altura da foto */
+    border-radius: 8px;  /* Bordas levemente arredondadas */
+    object-fit: cover;  /* Para garantir que a imagem não distorça */
+    border: 2px solid #ddd;  /* Borda ao redor da foto */
+}
 
 
 
