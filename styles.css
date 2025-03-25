@@ -164,4 +164,37 @@ ul {
     list-style-type: square;
 }
 
+nav {
+    position: fixed;  /* Fixa a barra de navegação no topo */
+    top: 0;           /* Fixa no topo da página */
+    left: 0;          /* Alinha à esquerda */
+    width: 100%;      /* Preenche toda a largura da tela */
+    background-color: #fff;  /* Cor de fundo para garantir que o texto seja visível */
+    box-shadow: 0 4px 2px -2px gray;  /* Sombra sutil para a barra */
+    z-index: 1000;    /* Garante que a barra fique acima de outros elementos */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;  /* Centraliza os itens do menu */
+}
+
+nav ul li {
+    display: inline;  /* Coloca os itens lado a lado */
+    margin-right: 20px;  /* Espaço entre os itens */
+}
+
+nav ul li a {
+    text-decoration: none;  /* Remove o sublinhado */
+    color: #333;  /* Cor do texto */
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;  /* Muda a cor do fundo ao passar o mouse */
+}
+
 
