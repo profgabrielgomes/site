@@ -207,4 +207,29 @@ section {
     }
 }
 
+.hint-card {
+    position: relative;
+    background: white; /* Certifique-se de que o fundo seja branco */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que nenhum elemento extrapole a borda */
+}
+
+.hint-info a {
+    position: relative;
+    z-index: 2; /* Faz o link "Read More" ficar acima do fundo azul */
+    color: white; /* Se necessário, ajuste a cor do texto */
+    background: #007BFF; /* Azul padrão */
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hint-info a:hover {
+    background: #0056b3; /* Azul mais escuro no hover */
+}
+
+
 
