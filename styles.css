@@ -214,4 +214,74 @@ nav ul li a:hover {
     }
 }
 
+/* Seção de Interesting Facts */
+section {
+    width: 90%;
+    max-width: 800px; /* Controla a largura máxima para manter um design equilibrado */
+    margin: 40px auto; /* Centraliza a seção na página */
+    text-align: center; /* Garante alinhamento do título */
+}
+
+/* Estiliza a grade de cartões */
+.hints-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
+    justify-content: center; /* Alinha os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os cartões */
+    margin-top: 20px;
+}
+
+/* Estiliza os cartões individuais */
+.hint-card {
+    width: 300px; /* Largura fixa para garantir alinhamento */
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha o conteúdo do cartão à esquerda */
+}
+
+.hint-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.hint-info h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.hint-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Link para leitura */
+.hint-info a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hint-info a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .hints-grid {
+        flex-direction: column; /* Faz os cartões ficarem em coluna em telas pequenas */
+        align-items: center; /* Garante centralização */
+    }
+
+    .hint-card {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+    }
+}
 
