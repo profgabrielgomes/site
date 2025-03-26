@@ -8,6 +8,11 @@ body {
     line-height: 1.6;
 }
 
+/* Garantir que todos os parágrafos fiquem justificados */
+p {
+    text-align: justify;
+}
+
 /* Navegação fixa e discreta */
 nav {
     position: fixed;
@@ -49,22 +54,21 @@ nav ul li a:hover {
 
 /* Estilo para telas pequenas (até 768px) */
 @media (max-width: 768px) {
-    /* O menu será exibido normalmente em telas pequenas */
     nav ul {
-        display: flex; /* Deixe o menu flexível em telas pequenas */
-        flex-direction: row; /* Itens dispostos na horizontal */
-        width: 100%; /* Ocupa toda a largura */
+        display: flex;
+        flex-direction: row;
+        width: 100%;
         background-color: #333;
     }
 
     nav ul li {
-        width: auto; /* Itens com largura automática */
+        width: auto;
         text-align: center;
     }
 
     nav ul li a {
-        padding: 10px; /* Menos espaçamento para melhorar a exibição */
-        font-size: 16px; /* Ajuste do tamanho da fonte */
+        padding: 10px;
+        font-size: 16px;
     }
 }
 
@@ -72,10 +76,9 @@ nav ul li a:hover {
 .container {
     width: 80%;
     max-width: 900px;
-    margin: 0 auto; /* Centraliza o conteúdo */
+    margin: 0 auto;
     text-align: justify;
 }
-
 
 header {
     text-align: center;
@@ -93,18 +96,18 @@ footer {
 /* Alinhamento de foto e nome */
 .profile {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
-    gap: 15px; /* Espaçamento entre a foto e o nome */
+    align-items: center;
+    gap: 15px;
     padding: 20px;
 }
 
 /* Estilo da foto em formato 3x4 */
 .profile-photo {
-    width: 90px; /* Largura */
-    height: 120px; /* Altura (3x4) */
-    border-radius: 8px; /* Bordas arredondadas */
-    object-fit: cover; /* Mantém o conteúdo da imagem sem distorção */
-    border: 2px solid #ddd; /* Borda ao redor da foto */
+    width: 90px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #ddd;
 }
 
 /* Estilo do nome e logo do Flamengo */
@@ -113,15 +116,15 @@ footer {
     margin: 0;
     color: black;
     display: flex;
-    align-items: center; /* Alinha o texto e o ícone do Flamengo */
+    align-items: center;
 }
 
 /* Logo do Flamengo */
 .flamengo-logo {
-    margin-left: 10px; /* Espaço entre o nome e o logo */
+    margin-left: 10px;
     width: 32px;
     height: 32px;
-    vertical-align: middle; /* Alinha verticalmente o ícone do Flamengo */
+    vertical-align: middle;
 }
 
 .profile-info p {
@@ -130,117 +133,31 @@ footer {
     margin: 5px 0 0;
 }
 
-/* Melhoria no estilo de navegação para melhorar a visibilidade */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-}
-
-/* Hover efeito no menu */
-nav ul li a:hover {
-    background-color: #ddd;
-    color: #333;
-}
-
-
-/* Barra de navegação fixa */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 1000;
-    box-shadow: 0 4px 2px -2px gray;
-    padding: 10px 0;
-}
-
-/* Estilo para o menu */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
-    gap: 10px; /* Espaço entre os itens */
-}
-
-/* Itens de navegação */
-nav ul li {
-    display: inline-block;
-}
-
-/* Links do menu */
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
-}
-
-/* Hover nos links */
-nav ul li a:hover {
-    background-color: #ddd;
-    color: #333;
-}
-
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: row; /* Mantém os itens na horizontal */
-        justify-content: center; /* Centraliza os itens */
-    }
-
-    nav ul li a {
-        padding: 8px 10px; /* Reduz o espaçamento */
-        font-size: 0.9rem; /* Diminui o tamanho da fonte */
-    }
-}
-
 /* Seção de Interesting Facts */
 section {
     width: 90%;
-    max-width: 800px; /* Controla a largura máxima para manter um design equilibrado */
-    margin: 40px auto; /* Centraliza a seção na página */
-    text-align: center; /* Garante alinhamento do título */
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
 }
 
 /* Estiliza a grade de cartões */
 .hints-grid {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
-    justify-content: center; /* Alinha os itens horizontalmente */
-    gap: 20px; /* Espaçamento entre os cartões */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
 }
 
 /* Estiliza os cartões individuais */
 .hint-card {
-    width: 300px; /* Largura fixa para garantir alinhamento */
+    width: 300px;
     background: #f9f9f9;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Alinha o conteúdo do cartão à esquerda */
+    text-align: left;
 }
 
 .hint-card img {
@@ -248,15 +165,18 @@ section {
     border-radius: 5px;
 }
 
+/* Justificar o texto dentro dos cartões */
 .hint-info h3 {
     font-size: 1.2rem;
     margin-top: 10px;
     color: #333;
+    text-align: justify;
 }
 
 .hint-info p {
     font-size: 0.9rem;
     color: #666;
+    text-align: justify;
 }
 
 /* Link para leitura */
@@ -278,12 +198,13 @@ section {
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .hints-grid {
-        flex-direction: column; /* Faz os cartões ficarem em coluna em telas pequenas */
-        align-items: center; /* Garante centralização */
+        flex-direction: column;
+        align-items: center;
     }
 
     .hint-card {
-        width: 90%; /* Ocupa quase toda a largura da tela */
+        width: 90%;
     }
 }
+
 
