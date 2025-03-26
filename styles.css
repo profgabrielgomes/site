@@ -207,6 +207,7 @@ section {
     }
 }
 
+/* Personalização do cartão para Read More */
 .hint-card {
     position: relative;
     background: white; /* Certifique-se de que o fundo seja branco */
@@ -237,6 +238,7 @@ a {
     outline: none;
     color: inherit;
 }
+
 
 
 
