@@ -239,6 +239,21 @@ a {
     color: inherit;
 }
 
+/* Estilo geral para links */
+a {
+    color: #007bff; /* Cor azul */
+    text-decoration: underline; /* Sublinhado */
+}
+
+/* Para links dentro dos cartões */
+.hint-info a {
+    color: #007bff; /* Cor azul */
+    text-decoration: underline; /* Sublinhado */
+    background-color: transparent; /* Sem fundo */
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
 
 
 
