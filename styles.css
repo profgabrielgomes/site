@@ -231,5 +231,13 @@ section {
     background: #0056b3; /* Azul mais escuro no hover */
 }
 
+a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: inherit;
+}
+
+
 
 
