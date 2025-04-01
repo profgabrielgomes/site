@@ -70,6 +70,7 @@ nav ul li a {
     padding: 15px;
     display: block;
     transition: background-color 0.3s ease;
+    font-size: 0.95rem; /* Tamanho ligeiramente reduzido para caber mais itens */
 }
 
 nav ul li a:hover {
@@ -78,6 +79,12 @@ nav ul li a:hover {
 }
 
 /* ===== RESPONSIVIDADE ===== */
+@media (max-width: 992px) {
+    nav ul li a {
+        padding: 15px 10px; /* Reduz o padding para telas médias */
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 50px;
@@ -112,6 +119,7 @@ nav ul li a:hover {
     nav ul li a {
         padding: 15px;
         border-top: 1px solid #444;
+        font-size: 1rem; /* Tamanho normal em mobile */
     }
     
     /* Animação do Hambúrguer */
@@ -126,8 +134,7 @@ nav ul li a:hover {
     }
 }
 
-/* ===== SEU CSS EXISTENTE (MANTIDO SEM ALTERAÇÕES) ===== */
-/* Melhorando a aparência de outras partes */
+/* ===== SEU CSS EXISTENTE ===== */
 .container {
     width: 80%;
     max-width: 900px;
@@ -148,7 +155,6 @@ footer {
     border-top: 1px solid #eee;
 }
 
-/* Alinhamento de foto e nome */
 .profile {
     display: flex;
     align-items: center;
@@ -156,7 +162,6 @@ footer {
     padding: 20px;
 }
 
-/* Estilo da foto em formato 3x4 */
 .profile-photo {
     width: 90px;
     height: 120px;
@@ -165,7 +170,6 @@ footer {
     border: 2px solid #ddd;
 }
 
-/* Estilo do nome e logo do Flamengo */
 .profile-info h1 {
     font-size: 2rem;
     margin: 0;
@@ -174,7 +178,6 @@ footer {
     align-items: center;
 }
 
-/* Logo do Flamengo */
 .flamengo-logo {
     margin-left: 10px;
     width: 32px;
@@ -188,7 +191,6 @@ footer {
     margin: 5px 0 0;
 }
 
-/* Seção de Interesting Facts */
 section {
     width: 90%;
     max-width: 800px;
@@ -196,7 +198,6 @@ section {
     text-align: center;
 }
 
-/* Estiliza a grade de cartões */
 .hints-grid {
     display: flex;
     flex-wrap: wrap;
@@ -205,7 +206,6 @@ section {
     margin-top: 20px;
 }
 
-/* Estiliza os cartões individuais */
 .hint-card {
     width: 300px;
     background: #f9f9f9;
@@ -220,7 +220,6 @@ section {
     border-radius: 5px;
 }
 
-/* Justificar o texto dentro dos cartões */
 .hint-info h3 {
     font-size: 1.2rem;
     margin-top: 10px;
@@ -234,7 +233,6 @@ section {
     text-align: justify;
 }
 
-/* Link para leitura */
 .hint-info a {
     display: inline-block;
     margin-top: 10px;
@@ -250,7 +248,6 @@ section {
     background-color: #0056b3;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .hints-grid {
         flex-direction: column;
@@ -262,7 +259,6 @@ section {
     }
 }
 
-/* Personalização do cartão para Read More */
 .hint-card {
     position: relative;
     background: white;
@@ -294,13 +290,11 @@ a {
     color: inherit;
 }
 
-/* Estilo geral para links */
 a {
     color: #007bff;
     text-decoration: underline;
 }
 
-/* Para links dentro dos cartões */
 .hint-info a {
     color: #007bff;
     text-decoration: underline;
