@@ -242,5 +242,13 @@
 
 
     </div>
+<!-- No final do seu arquivo HTML, antes do </body> -->
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('toggle');
+    document.querySelector('nav ul').classList.toggle('nav-active');
+});
+</script>    
+    
 </body>
 </html>
