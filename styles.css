@@ -303,6 +303,28 @@ a {
     border-radius: 5px;
 }
 
-body {
-    overflow-x: hidden;
+/* Estilo para o seletor de idiomas */
+.language-switcher {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Se estiver dentro da navegação */
+.nav-container .language-switcher {
+    margin-left: auto; /* Alinha à direita */
+    padding-right: 15px;
 }
