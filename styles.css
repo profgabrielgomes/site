@@ -328,3 +328,14 @@ a {
     margin-left: auto; /* Alinha à direita */
     padding-right: 15px;
 }
+
+/* Elimina a rolagem horizontal */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Garante que todos os elementos respeitem os limites */
+* {
+    box-sizing: border-box;
+}
