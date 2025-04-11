@@ -1,6 +1,50 @@
 <script>
+// Menu Hambúrguer (mantido igual, pois está correto)
 document.querySelector('.hamburger').addEventListener('click', function() {
     this.classList.toggle('toggle');
     document.querySelector('nav ul').classList.toggle('nav-active');
+});
+
+// Seletor de Idiomas - Versão Melhorada
+document.addEventListener('DOMContentLoaded', function() {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    
+    // Verifica idioma salvo ao carregar a página
+    const savedLang = localStorage.getItem('preferredLang') || 'pt-BR';
+    document.documentElement.lang = savedLang;
+
+    langButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            
+            // 1. Atualiza o atributo lang do HTML
+            document.documentElement.lang = lang;
+            
+            // 2. Salva preferência
+            localStorage.setItem('preferredLang', lang);
+            
+            // 3. Feedback visual (opcional)
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // 4. Redirecionamento ou troca dinâmica
+            if (window.location.pathname.includes('/pt/') || 
+                window.location.pathname.includes('/es/') || 
+                window.location.pathname.includes('/en/')) {
+                // Se já está em subpasta de idioma
+                const newUrl = window.location.pathname
+                    .replace(/\/pt\/|\/es\/|\/en\//, `/${lang}/`);
+                window.location.href = newUrl;
+            } else {
+                // Se não, mostra alerta (substitua por sua lógica de tradução)
+                alert(`Idioma alterado para: ${lang}\nEm produção, isso redirecionaria para /${lang}/`);
+            }
+        });
+        
+        // Destaca o botão do idioma atual
+        if (button.getAttribute('data-lang') === savedLang) {
+            button.classList.add('active');
+        }
+    });
 });
 </script>
