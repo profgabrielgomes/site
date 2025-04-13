@@ -362,3 +362,11 @@ table, img, iframe {
     overflow-x: auto; /* Caso haja tabelas ou conteúdo largo */
   }
 }
+
+@media (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
