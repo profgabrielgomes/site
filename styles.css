@@ -319,6 +319,16 @@ a {
     transition: transform 0.2s;
 }
 
+.teaching-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+
 .lang-btn:hover {
     transform: scale(1.1);
 }
