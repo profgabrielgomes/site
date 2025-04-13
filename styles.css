@@ -349,3 +349,16 @@ html, body {
 * {
     box-sizing: border-box;
 }
+
+table, img, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .teaching-section {
+    width: 100%;
+    padding: 10px;
+    overflow-x: auto; /* Caso haja tabelas ou conteúdo largo */
+  }
+}
