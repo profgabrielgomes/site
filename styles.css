@@ -350,23 +350,94 @@ html, body {
     box-sizing: border-box;
 }
 
-table, img, iframe {
-  max-width: 100%;
-  height: auto;
+/* ===== TEACHING SECTION RESPONSIVENESS ===== */
+.teaching-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.teaching-content {
+    width: 100%;
+    overflow: hidden; /* Previne vazamento de conteúdo */
+}
+
+/* Ajustes para tabelas (caso existam) */
+.teaching-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.teaching-section th, 
+.teaching-section td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Ajustes para listas */
+.teaching-section ul, 
+.teaching-section ol {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Ajustes para imagens */
+.teaching-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Media Queries específicas para Teaching */
+@media (max-width: 768px) {
+    .teaching-section {
+        width: 95%;
+        margin: 30px auto;
+        padding: 0 10px;
+    }
+    
+    .teaching-section table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .teaching-section th, 
+    .teaching-section td {
+        min-width: 120px; /* Evita células muito estreitas */
+    }
+    
+    .teaching-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .teaching-section p {
+        text-align: left; /* Em mobile, justificado pode ficar estranho */
+    }
+}
+
+/* Ajustes para iframes (vídeos, apresentações) */
+.teaching-section iframe {
+    max-width: 100%;
+    margin: 15px 0;
+}
+
+/* Melhorias para cards de disciplinas (caso existam) */
+.teaching-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 768px) {
-  .teaching-section {
-    width: 100%;
-    padding: 10px;
-    overflow-x: auto; /* Caso haja tabelas ou conteúdo largo */
-  }
-}
-
-@media (max-width: 600px) {
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
+    .teaching-card {
+        padding: 12px;
+    }
 }
