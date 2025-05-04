@@ -271,15 +271,42 @@ document.querySelector('.hamburger').addEventListener('click', function() {
 });
 </script>    
 
-    <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.getElementById('nav-links');
+<script>
+// Barra de navegação retrátil
+let lastScroll = 0;
+const navbar = document.querySelector('nav');
+const navbarHeight = navbar.offsetHeight;
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    // No topo da página, sempre mostra a navbar
+    if (currentScroll <= 0) {
+        navbar.classList.remove('nav-hidden');
+        navbar.classList.add('nav-visible');
+        return;
+    }
+    
+    // Se rolar para baixo mais que a altura da navbar, esconde
+    if (currentScroll > lastScroll && currentScroll > navbarHeight) {
+        navbar.classList.remove('nav-visible');
+        navbar.classList.add('nav-hidden');
+    } 
+    // Se rolar para cima, mostra
+    else if (currentScroll < lastScroll) {
+        navbar.classList.remove('nav-hidden');
+        navbar.classList.add('nav-visible');
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// Menu hamburger (para mobile)
+document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('toggle');
+    document.querySelector('nav ul').classList.toggle('nav-active');
+});
 </script>
-
     
 </body>
 </html>
