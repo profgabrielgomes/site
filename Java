@@ -47,4 +47,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Barra de navegação retrátil
+let lastScroll = 0;
+const navbar = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+        navbar.classList.remove('nav-hidden');
+        navbar.classList.add('nav-visible');
+        return;
+    }
+    
+    if (currentScroll > lastScroll && !navbar.classList.contains('nav-hidden')) {
+        // Rolar para baixo
+        navbar.classList.remove('nav-visible');
+        navbar.classList.add('nav-hidden');
+    } else if (currentScroll < lastScroll && navbar.classList.contains('nav-hidden')) {
+        // Rolar para cima
+        navbar.classList.remove('nav-hidden');
+        navbar.classList.add('nav-visible');
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// Menu hamburger (para mobile)
+document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('toggle');
+    document.querySelector('nav ul').classList.toggle('nav-active');
+});
 </script>
